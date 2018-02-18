@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <ctime>
+#include "string.h"
 
 #include "version.h"
 

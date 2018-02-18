@@ -4,6 +4,8 @@
 #include <vector>
 #include <ctime>
 
+#include "version.h"
+
 //#define LOCAL_DEBUG 1
 using namespace std;
 
@@ -146,7 +148,7 @@ int main(int argc, char *argv[])
         if ((argc > 1) &&
            (!strncmp(argv[1], "-v", 2) || !strncmp(argv[1], "--version", 9)))
         {
-            cout << "version " /*<< version()*/ << endl;
+            cout << "version " << version() << endl;
             return 0;
         }
         else if (argc > 1) {

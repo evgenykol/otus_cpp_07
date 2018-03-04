@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['observer',['Observer',['../class_observer.html',1,'']]]
+  ['filedumper',['FileDumper',['../classbulk_1_1_file_dumper.html',1,'bulk']]]
 ];

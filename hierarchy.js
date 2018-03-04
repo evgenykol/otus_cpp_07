@@ -1,9 +1,10 @@
 var hierarchy =
 [
-    [ "Commands", "class_commands.html", null ],
-    [ "Dumper", "class_dumper.html", null ],
-    [ "Observer", "class_observer.html", [
-      [ "ConsoleDumper", "class_console_dumper.html", null ],
-      [ "FileDumper", "class_file_dumper.html", null ]
+    [ "bulk::BulkContext", "classbulk_1_1_bulk_context.html", null ],
+    [ "bulk::Commands", "classbulk_1_1_commands.html", null ],
+    [ "bulk::Dumper", "classbulk_1_1_dumper.html", null ],
+    [ "bulk::Observer", "classbulk_1_1_observer.html", [
+      [ "bulk::ConsoleDumper", "classbulk_1_1_console_dumper.html", null ],
+      [ "bulk::FileDumper", "classbulk_1_1_file_dumper.html", null ]
     ] ]
 ];

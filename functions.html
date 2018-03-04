@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -99,7 +100,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -110,43 +111,61 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 <div class="contents">
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div><ul>
+<li>add_command()
+: <a class="el" href="classbulk_1_1_bulk_context.html#a6ac7dda918e7eda7ae249016ac20ccc7">bulk::BulkContext</a>
+</li>
+<li>BulkContext()
+: <a class="el" href="classbulk_1_1_bulk_context.html#a2701d3fcce2f5aa49a8671deda85b898">bulk::BulkContext</a>
+</li>
 <li>clear()
-: <a class="el" href="class_commands.html#a8e7a8de7d6938b8fceed1baf0495b5a4">Commands</a>
+: <a class="el" href="classbulk_1_1_commands.html#a8e7a8de7d6938b8fceed1baf0495b5a4">bulk::Commands</a>
 </li>
 <li>cmdCounter
-: <a class="el" href="class_commands.html#af4c6f345c6d8d15feb9b7fb1d86d0349">Commands</a>
+: <a class="el" href="classbulk_1_1_commands.html#a5091c0a5ebf5b864dee64c040ac60ffe">bulk::Commands</a>
 </li>
 <li>cmds
-: <a class="el" href="class_commands.html#aae4818fe1dc158e85c5b105c01463b01">Commands</a>
+: <a class="el" href="classbulk_1_1_commands.html#a5979eb564b3707654e8cb39d74a33e17">bulk::Commands</a>
 </li>
 <li>ConsoleDumper()
-: <a class="el" href="class_console_dumper.html#a7e0411405b5bf9867bb1af7d019fc7fc">ConsoleDumper</a>
+: <a class="el" href="classbulk_1_1_console_dumper.html#a7e0411405b5bf9867bb1af7d019fc7fc">bulk::ConsoleDumper</a>
 </li>
 <li>dump()
-: <a class="el" href="class_console_dumper.html#ae5eec73e40551f3f6a96a9102a120f30">ConsoleDumper</a>
-, <a class="el" href="class_file_dumper.html#acb561af44327141312ed3ba6546e677f">FileDumper</a>
-, <a class="el" href="class_observer.html#ad353f3b0aba0953eecb8a50d71a37d14">Observer</a>
+: <a class="el" href="classbulk_1_1_console_dumper.html#ae5eec73e40551f3f6a96a9102a120f30">bulk::ConsoleDumper</a>
+, <a class="el" href="classbulk_1_1_file_dumper.html#acb561af44327141312ed3ba6546e677f">bulk::FileDumper</a>
+, <a class="el" href="classbulk_1_1_observer.html#aa334a2796c417350c1f2e56ff82f5dfc">bulk::Observer</a>
 </li>
 <li>dump_commands()
-: <a class="el" href="class_dumper.html#a0b481897891e6cde5c865c459e4ba1cc">Dumper</a>
+: <a class="el" href="classbulk_1_1_dumper.html#a0b481897891e6cde5c865c459e4ba1cc">bulk::Dumper</a>
+</li>
+<li>end_input()
+: <a class="el" href="classbulk_1_1_bulk_context.html#adaa4ddae5b6214d065451e7a611f500b">bulk::BulkContext</a>
 </li>
 <li>FileDumper()
-: <a class="el" href="class_file_dumper.html#aae2508b3344be79964cb6bad7b0f30c3">FileDumper</a>
+: <a class="el" href="classbulk_1_1_file_dumper.html#aae2508b3344be79964cb6bad7b0f30c3">bulk::FileDumper</a>
+</li>
+<li>get_unique_number()
+: <a class="el" href="classbulk_1_1_file_dumper.html#ae59c531c48b6d121c6f3b4fbd6cd33df">bulk::FileDumper</a>
 </li>
 <li>notify()
-: <a class="el" href="class_dumper.html#a9fd06fb4235ec2ce9a81696ae9ab64e4">Dumper</a>
+: <a class="el" href="classbulk_1_1_dumper.html#a9fd06fb4235ec2ce9a81696ae9ab64e4">bulk::Dumper</a>
+</li>
+<li>process_input()
+: <a class="el" href="classbulk_1_1_bulk_context.html#a2000c08bfbc690c52d8aaea562639821">bulk::BulkContext</a>
 </li>
 <li>push_back()
-: <a class="el" href="class_commands.html#aafd06f8e899d2c5077510d50548d198d">Commands</a>
+: <a class="el" href="classbulk_1_1_commands.html#aafd06f8e899d2c5077510d50548d198d">bulk::Commands</a>
 </li>
 <li>push_back_block()
-: <a class="el" href="class_commands.html#a6c6f5e1f865c2bb5accaf56d22422229">Commands</a>
+: <a class="el" href="classbulk_1_1_commands.html#a6c6f5e1f865c2bb5accaf56d22422229">bulk::Commands</a>
 </li>
 <li>subscribe()
-: <a class="el" href="class_dumper.html#a6f7207ce2bda6cf890a7b8fdb71f6e89">Dumper</a>
+: <a class="el" href="classbulk_1_1_dumper.html#a6f7207ce2bda6cf890a7b8fdb71f6e89">bulk::Dumper</a>
 </li>
 <li>timestamp
-: <a class="el" href="class_commands.html#aa542d8f42c5caa0ab91b75a07a995d4a">Commands</a>
+: <a class="el" href="classbulk_1_1_commands.html#a3d0744534489da5f48a54252c4c7ae81">bulk::Commands</a>
+</li>
+<li>~BulkContext()
+: <a class="el" href="classbulk_1_1_bulk_context.html#aa2dd26bb7a0f678d51e8ec8d800b271b">bulk::BulkContext</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -154,7 +173,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Feb 18 2018 20:24:54 for bulk by
+    <li class="footer">Generated on Sun Mar 4 2018 18:55:09 for bulk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

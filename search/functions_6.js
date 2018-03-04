@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['subscribe',['subscribe',['../class_dumper.html#a6f7207ce2bda6cf890a7b8fdb71f6e89',1,'Dumper']]]
+  ['get_5funique_5fnumber',['get_unique_number',['../classbulk_1_1_file_dumper.html#ae59c531c48b6d121c6f3b4fbd6cd33df',1,'bulk::FileDumper']]]
 ];

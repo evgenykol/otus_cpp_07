@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['project_5fversion_5fpatch',['PROJECT_VERSION_PATCH',['../version_8h.html#a4a5fc96a4bdd7d68ed99ccce9ca2e77e',1,'version.h']]],
-  ['push_5fback',['push_back',['../class_commands.html#aafd06f8e899d2c5077510d50548d198d',1,'Commands']]],
-  ['push_5fback_5fblock',['push_back_block',['../class_commands.html#a6c6f5e1f865c2bb5accaf56d22422229',1,'Commands']]]
+  ['get_5funique_5fnumber',['get_unique_number',['../classbulk_1_1_file_dumper.html#ae59c531c48b6d121c6f3b4fbd6cd33df',1,'bulk::FileDumper']]]
 ];

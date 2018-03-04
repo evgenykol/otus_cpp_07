@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -92,7 +93,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,17 +110,21 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <div class="textblock">
 <p><a href="hierarchy.html">Go to the textual class hierarchy</a></p>
 </div><table border="0" cellspacing="10" cellpadding="0">
-<tr><td><img src="inherit_graph_0.png" border="0" alt="" usemap="#_commands"/>
-<map name="_commands" id="_commands">
-<area shape="rect" id="node1" href="class_commands.html" title="Commands" alt="" coords="6,5,95,32"/></map>
+<tr><td><img src="inherit_graph_0.png" border="0" alt="" usemap="#bulk_1_1_bulk_context"/>
+<map name="bulk_1_1_bulk_context" id="bulk_1_1_bulk_context">
+<area shape="rect" id="node1" href="classbulk_1_1_bulk_context.html" title="bulk::BulkContext" alt="" coords="6,5,133,32"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_1.png" border="0" alt="" usemap="#_dumper"/>
-<map name="_dumper" id="_dumper">
-<area shape="rect" id="node1" href="class_dumper.html" title="Dumper" alt="" coords="6,5,74,32"/></map>
+<tr><td><img src="inherit_graph_1.png" border="0" alt="" usemap="#bulk_1_1_commands"/>
+<map name="bulk_1_1_commands" id="bulk_1_1_commands">
+<area shape="rect" id="node1" href="classbulk_1_1_commands.html" title="bulk::Commands" alt="" coords="6,5,127,32"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_2.png" border="0" alt="" usemap="#_observer"/>
-<map name="_observer" id="_observer">
-<area shape="rect" id="node1" href="class_observer.html" title="Observer" alt="" coords="5,31,80,57"/><area shape="rect" id="node2" href="class_console_dumper.html" title="ConsoleDumper" alt="" coords="129,5,245,32"/><area shape="rect" id="node3" href="class_file_dumper.html" title="FileDumper" alt="" coords="142,56,231,83"/></map>
+<tr><td><img src="inherit_graph_2.png" border="0" alt="" usemap="#bulk_1_1_dumper"/>
+<map name="bulk_1_1_dumper" id="bulk_1_1_dumper">
+<area shape="rect" id="node1" href="classbulk_1_1_dumper.html" title="bulk::Dumper" alt="" coords="6,5,106,32"/></map>
+</td></tr>
+<tr><td><img src="inherit_graph_3.png" border="0" alt="" usemap="#bulk_1_1_observer"/>
+<map name="bulk_1_1_observer" id="bulk_1_1_observer">
+<area shape="rect" id="node1" href="classbulk_1_1_observer.html" title="bulk::Observer" alt="" coords="5,31,112,57"/><area shape="rect" id="node2" href="classbulk_1_1_console_dumper.html" title="bulk::ConsoleDumper" alt="" coords="161,5,309,32"/><area shape="rect" id="node3" href="classbulk_1_1_file_dumper.html" title="bulk::FileDumper" alt="" coords="174,56,295,83"/></map>
 </td></tr>
 </table>
 </div><!-- contents -->
@@ -127,7 +132,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Feb 18 2018 20:24:54 for bulk by
+    <li class="footer">Generated on Sun Mar 4 2018 18:55:09 for bulk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

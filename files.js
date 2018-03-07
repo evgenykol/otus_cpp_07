@@ -9,6 +9,7 @@ var files =
       [ "FileDumper", "classbulk_1_1_file_dumper.html", "classbulk_1_1_file_dumper" ],
       [ "BulkContext", "classbulk_1_1_bulk_context.html", "classbulk_1_1_bulk_context" ]
     ] ],
+    [ "bulk_tests.cpp", "bulk__tests_8cpp.html", "bulk__tests_8cpp" ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
     [ "version.h", "version_8h.html", "version_8h" ]
 ];

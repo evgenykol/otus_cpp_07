@@ -164,34 +164,32 @@ $(document).ready(function(){initNavTree('bulk_8h_source.html','');});
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classbulk_1_1_bulk_context.html">   58</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbulk_1_1_bulk_context.html">BulkContext</a></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">size_t</span> commandsCount;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classbulk_1_1_dumper.html">Dumper</a>* dumper;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classbulk_1_1_console_dumper.html">ConsoleDumper</a>* conDumper;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classbulk_1_1_file_dumper.html">FileDumper</a>* fileDumper;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">size_t</span> bulk_size;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classbulk_1_1_dumper.html">Dumper</a>* dumper;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classbulk_1_1_console_dumper.html">ConsoleDumper</a>* conDumper;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classbulk_1_1_file_dumper.html">FileDumper</a>* fileDumper;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classbulk_1_1_commands.html">Commands</a> cmds;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">string</span> input_line_tail;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> curCounter = 0;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> blockFound = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">int</span> nestedBlocksCount = 0;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classbulk_1_1_bulk_context.html">BulkContext</a>(<span class="keywordtype">size_t</span> bulk_size);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    ~<a class="code" href="classbulk_1_1_bulk_context.html">BulkContext</a>();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> process_input(<span class="keyword">const</span> <span class="keywordtype">char</span> *line, <span class="keywordtype">size_t</span> size);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> add_command(<span class="keywordtype">string</span> &amp;cmd);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> end_input();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">bool</span> blockFound = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> nestedBlocksCount = 0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classbulk_1_1_bulk_context.html#ac8daaeacb3ebd94a0297d2f31694e6d0">   70</a></span>&#160;    <a class="code" href="classbulk_1_1_commands.html">Commands</a> <a class="code" href="classbulk_1_1_bulk_context.html#ac8daaeacb3ebd94a0297d2f31694e6d0">cmds</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="classbulk_1_1_bulk_context.html">BulkContext</a>(<span class="keywordtype">size_t</span> bulk_size);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    ~<a class="code" href="classbulk_1_1_bulk_context.html">BulkContext</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> add_line(<span class="keywordtype">string</span> &amp;cmd);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> end_input();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 <div class="ttc" id="classbulk_1_1_console_dumper_html"><div class="ttname"><a href="classbulk_1_1_console_dumper.html">bulk::ConsoleDumper</a></div><div class="ttdef"><b>Definition:</b> <a href="bulk_8h_source.html#l00041">bulk.h:41</a></div></div>
 <div class="ttc" id="classbulk_1_1_dumper_html"><div class="ttname"><a href="classbulk_1_1_dumper.html">bulk::Dumper</a></div><div class="ttdef"><b>Definition:</b> <a href="bulk_8h_source.html#l00031">bulk.h:31</a></div></div>
 <div class="ttc" id="classbulk_1_1_file_dumper_html"><div class="ttname"><a href="classbulk_1_1_file_dumper.html">bulk::FileDumper</a></div><div class="ttdef"><b>Definition:</b> <a href="bulk_8h_source.html#l00048">bulk.h:48</a></div></div>
 <div class="ttc" id="classbulk_1_1_commands_html_a5091c0a5ebf5b864dee64c040ac60ffe"><div class="ttname"><a href="classbulk_1_1_commands.html#a5091c0a5ebf5b864dee64c040ac60ffe">bulk::Commands::cmdCounter</a></div><div class="ttdeci">int cmdCounter</div><div class="ttdef"><b>Definition:</b> <a href="bulk_8h_source.html#l00018">bulk.h:18</a></div></div>
 <div class="ttc" id="classbulk_1_1_commands_html"><div class="ttname"><a href="classbulk_1_1_commands.html">bulk::Commands</a></div><div class="ttdef"><b>Definition:</b> <a href="bulk_8h_source.html#l00013">bulk.h:13</a></div></div>
 <div class="ttc" id="classbulk_1_1_commands_html_a5979eb564b3707654e8cb39d74a33e17"><div class="ttname"><a href="classbulk_1_1_commands.html#a5979eb564b3707654e8cb39d74a33e17">bulk::Commands::cmds</a></div><div class="ttdeci">vector&lt; string &gt; cmds</div><div class="ttdef"><b>Definition:</b> <a href="bulk_8h_source.html#l00016">bulk.h:16</a></div></div>
+<div class="ttc" id="classbulk_1_1_bulk_context_html_ac8daaeacb3ebd94a0297d2f31694e6d0"><div class="ttname"><a href="classbulk_1_1_bulk_context.html#ac8daaeacb3ebd94a0297d2f31694e6d0">bulk::BulkContext::cmds</a></div><div class="ttdeci">Commands cmds</div><div class="ttdef"><b>Definition:</b> <a href="bulk_8h_source.html#l00070">bulk.h:70</a></div></div>
 <div class="ttc" id="classbulk_1_1_observer_html"><div class="ttname"><a href="classbulk_1_1_observer.html">bulk::Observer</a></div><div class="ttdef"><b>Definition:</b> <a href="bulk_8h_source.html#l00025">bulk.h:25</a></div></div>
 <div class="ttc" id="classbulk_1_1_commands_html_a3d0744534489da5f48a54252c4c7ae81"><div class="ttname"><a href="classbulk_1_1_commands.html#a3d0744534489da5f48a54252c4c7ae81">bulk::Commands::timestamp</a></div><div class="ttdeci">time_t timestamp</div><div class="ttdef"><b>Definition:</b> <a href="bulk_8h_source.html#l00017">bulk.h:17</a></div></div>
 <div class="ttc" id="classbulk_1_1_bulk_context_html"><div class="ttname"><a href="classbulk_1_1_bulk_context.html">bulk::BulkContext</a></div><div class="ttdef"><b>Definition:</b> <a href="bulk_8h_source.html#l00058">bulk.h:58</a></div></div>
@@ -201,7 +199,7 @@ $(document).ready(function(){initNavTree('bulk_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="bulk_8h.html">bulk.h</a></li>
-    <li class="footer">Generated on Sun Mar 4 2018 18:55:09 for bulk by
+    <li class="footer">Generated on Wed Mar 7 2018 18:56:20 for bulk by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

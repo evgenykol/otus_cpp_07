@@ -8,6 +8,7 @@ addons:
     packages:
       - doxygen
       - graphviz
+      - libboost-test-dev -y
 
 script:
   - cmake .

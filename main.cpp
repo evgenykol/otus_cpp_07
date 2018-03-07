@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
         string line;
         while(getline(cin, line))
         {
-            blk.add_command(line);
+            blk.add_line(line);
         }
         blk.end_input();
     }

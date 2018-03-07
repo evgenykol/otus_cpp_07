@@ -57,24 +57,21 @@ public:
 
 class BulkContext
 {
-    static constexpr char delimiter = '\n';
-    size_t commandsCount;
+    size_t bulk_size;
     Dumper* dumper;
     ConsoleDumper* conDumper;
     FileDumper* fileDumper;
 
-    Commands cmds;
-    string input_line_tail;
-    int curCounter = 0;
+
     bool blockFound = false;
     int nestedBlocksCount = 0;
 
 public:
+    Commands cmds;
     BulkContext(size_t bulk_size);
     ~BulkContext();
 
-    void process_input(const char *line, size_t size);
-    void add_command(string &cmd);
+    void add_line(string &cmd);
     void end_input();
 };
 

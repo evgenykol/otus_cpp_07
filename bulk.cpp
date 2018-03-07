@@ -8,6 +8,7 @@ void Commands::push_back(string str)
     if(!cmds.size())
     {
         timestamp = time(nullptr);
+        cmdCounter = 0;
     }
     cmds.push_back(str);
     ++cmdCounter;
@@ -76,16 +77,9 @@ FileDumper::FileDumper(Dumper *dmp)
     dmp->subscribe(this);
 }
 
-
-string FileDumper::get_unique_number()
-{
-    static int unique_file_counter = 0;
-    return to_string(++unique_file_counter);
-}
-
 void FileDumper::dump(Commands &cmd)
 {
-    string filename = "bulk" + to_string(cmd.timestamp) + "_" + get_unique_number() + ".log";
+    string filename = "bulk" + to_string(cmd.timestamp) + ".log";
     ofstream of(filename);
 
     bool is_first = true;
@@ -106,10 +100,10 @@ void FileDumper::dump(Commands &cmd)
     of.close();
 }
 
-BulkContext::BulkContext(size_t bulk_size)
+BulkContext::BulkContext(size_t bulk_size_)
 {
     //cout << "ctor BulkContext" << endl;
-    commandsCount = bulk_size;
+    bulk_size = bulk_size_;
     dumper = new Dumper();
     conDumper = new ConsoleDumper(dumper);
     fileDumper = new FileDumper(dumper);
@@ -123,38 +117,13 @@ BulkContext::~BulkContext()
     delete fileDumper;
 }
 
-void BulkContext::process_input(const char *line, size_t size)
-{
-    //cout << "processLine: " << line << endl;
-    string cur_line = input_line_tail;
-    input_line_tail.clear();
-
-    for(int i = 0; i < size; ++i)
-    {
-        if(line[i] != delimiter)
-        {
-            cur_line.push_back(line[i]);
-        }
-        else
-        {
-            add_command(cur_line);
-            cur_line.clear();
-        }
-    }
-
-    //Если что-то осталось (не пришла целая команда) - сохраним
-    if(cur_line.size())
-    {
-        input_line_tail = cur_line;
-    }
-}
-void BulkContext::add_command(string &cmd)
+void BulkContext::add_line(string &cmd)
 {
     if((cmd != "{") && !blockFound)
     {
         cmds.push_back(cmd);
 
-        if(cmds.cmdCounter == commandsCount)
+        if(cmds.cmdCounter == bulk_size)
         {
             dumper->dump_commands(cmds);
             cmds.clear();

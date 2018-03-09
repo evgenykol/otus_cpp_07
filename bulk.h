@@ -17,6 +17,9 @@ public:
     time_t timestamp;
     int cmdCounter;
 
+    Commands();
+    ~Commands(){}
+
     void push_back(string str);
     void push_back_block(string str);
     void clear();
@@ -57,14 +60,13 @@ public:
 
 class BulkContext
 {
-    size_t bulk_size;
     Dumper* dumper;
     ConsoleDumper* conDumper;
     FileDumper* fileDumper;
 
-
-    bool blockFound = false;
-    int nestedBlocksCount = 0;
+    size_t bulk_size;
+    bool blockFound;
+    int nestedBlocksCount;
 
 public:
     Commands cmds;

@@ -7,7 +7,7 @@ endif()
 
 project(bulk VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
-find_package(Boost COMPONENTS unit_test_framework REQUIRED)
+#find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 configure_file(version.h.in version.h)
 
@@ -15,7 +15,7 @@ add_library(bulk_lib bulk.h bulk.cpp)
 
 add_executable(bulk main.cpp)
 
-add_executable(bulk_tests bulk_tests.cpp)
+#add_executable(bulk_tests bulk_tests.cpp)
 
 set_target_properties(bulk bulk_lib
         PROPERTIES
@@ -25,18 +25,18 @@ set_target_properties(bulk bulk_lib
                 COMPILE_OPTIONS -Wpedantic -Wall -Wextra
 )
 
-set_target_properties(bulk_tests
-        PROPERTIES
-                COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
-                INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
-)
+#set_target_properties(bulk_tests
+#        PROPERTIES
+#                COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
+#                INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
+#)
 
 target_link_libraries(bulk bulk_lib)
 
-target_link_libraries(bulk_tests
-        ${Boost_LIBRARIES}
-        bulk_lib
-)
+#target_link_libraries(bulk_tests
+#        ${Boost_LIBRARIES}
+#        bulk_lib
+#)
 
 install(TARGETS bulk RUNTIME DESTINATION bin)
 

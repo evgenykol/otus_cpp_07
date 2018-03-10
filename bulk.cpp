@@ -37,12 +37,12 @@ void Commands::clear()
 
 Dumper::Dumper()
 {
-    cout << "ctor Dumper" << endl;
+    //cout << "ctor Dumper" << endl;
 }
 
 Dumper::~Dumper()
 {
-    cout << "dtor Dumper" << endl;
+    //cout << "dtor Dumper" << endl;
 }
 
 void Dumper::subscribe(Observer *ob)
@@ -67,12 +67,12 @@ void Dumper::dump_commands(Commands &cmd)
 ConsoleDumper::ConsoleDumper(shared_ptr<Dumper> dmp)
 {
     dmp->subscribe(this);
-    cout << "ctor ConsoleDumper" << endl;
+    //cout << "ctor ConsoleDumper" << endl;
 }
 
 ConsoleDumper::~ConsoleDumper()
 {
-    cout << "dtor ConsoleDumper" << endl;
+    //cout << "dtor ConsoleDumper" << endl;
 }
 
 void ConsoleDumper::dump(Commands &cmd)
@@ -97,12 +97,12 @@ void ConsoleDumper::dump(Commands &cmd)
 FileDumper::FileDumper(shared_ptr<Dumper> dmp)
 {
     dmp->subscribe(this);
-    cout << "ctor FileDumper" << endl;
+    //cout << "ctor FileDumper" << endl;
 }
 
 FileDumper::~FileDumper()
 {
-    cout << "dtor FileDumper" << endl;
+    //cout << "dtor FileDumper" << endl;
 }
 
 void FileDumper::dump(Commands &cmd)
@@ -130,19 +130,19 @@ void FileDumper::dump(Commands &cmd)
 
 BulkContext::BulkContext(size_t bulk_size_)
 {
-    cout << "ctor BulkContext" << endl;
+    //cout << "ctor BulkContext" << endl;
     bulk_size = bulk_size_;
     blockFound = false;
     nestedBlocksCount = 0;
 
     dumper = make_shared<Dumper>();
-    conDumper = make_unique<ConsoleDumper>(dumper);
-    fileDumper = make_unique<FileDumper>(dumper);
+    conDumper = make_shared<ConsoleDumper>(dumper);
+    fileDumper = make_shared<FileDumper>(dumper);
 }
 
 BulkContext::~BulkContext()
 {
-    cout << "dtor BulkContext" << endl;
+    //cout << "dtor BulkContext" << endl;
 }
 
 void BulkContext::add_line(string &cmd)
@@ -201,5 +201,3 @@ void BulkContext::end_input()
         dumper->dump_commands(cmds);
     }
 }
-
-

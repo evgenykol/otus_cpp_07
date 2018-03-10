@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <ctime>
+#include <memory>
 #include "string.h"
 
 using namespace std;
@@ -36,6 +37,8 @@ class Dumper
     Commands cmds;
     vector<Observer *> subs;
 public:
+    Dumper();
+    ~Dumper();
     void subscribe(Observer *ob);
     void notify();
     void dump_commands(Commands &cmd);
@@ -44,15 +47,16 @@ public:
 class ConsoleDumper : public Observer
 {
 public:
-    ConsoleDumper(Dumper *dmp);
+    ConsoleDumper(shared_ptr<Dumper> dmp);
+    ~ConsoleDumper();
     void dump(Commands &cmd);
 };
 
 class FileDumper : public Observer
 {
 public:
-
-    FileDumper(Dumper *dmp);
+    FileDumper(shared_ptr<Dumper> dmp);
+    ~FileDumper();
     void dump(Commands &cmd);
     string get_unique_number();
 };
@@ -60,9 +64,9 @@ public:
 
 class BulkContext
 {
-    Dumper* dumper;
-    ConsoleDumper* conDumper;
-    FileDumper* fileDumper;
+    shared_ptr<Dumper> dumper;
+    shared_ptr<ConsoleDumper> conDumper;
+    shared_ptr<FileDumper> fileDumper;
 
     size_t bulk_size;
     bool blockFound;
